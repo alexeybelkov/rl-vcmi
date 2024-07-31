@@ -1,0 +1,17 @@
+version: "latest"
+
+services:
+  rl_vcmi_docker:
+    build:
+      context: image
+      dockerfile: Dockerfile
+    container_name: rl-vcmi
+    cap_add:
+      - SYS_PTRACE
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/app
+    ports:
+      - "127.0.0.1:3333:22"
+    image: 'rl-vcmi'
