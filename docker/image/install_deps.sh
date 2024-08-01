@@ -25,10 +25,22 @@ apt-add-repository 'deb https://apt.kitware.com/ubuntu/ jammy main'
 apt-get update
 
 apt-get install -y \
-    git \
     cmake \
-    g++\
-    clang \
+    make \
+    vim \
+    git \
+    build-essential \
+    linux-tools-common \
+	linux-tools-generic \
+    g++-13 \
+    clang-17 \
+    clang-format-17 \
+	clang-tidy-17 \
+	libc++-17-dev \
+	libc++abi-17-dev \
+	libclang-rt-17-dev \
+	clangd-17 \
+	lldb-17 \
     libsdl2-dev \
     libsdl2-image-dev \
     libsdl2-ttf-dev \
@@ -56,5 +68,4 @@ apt-get install -y \
 	python3-venv \
     ca-certificates \
 	openssh-server \
-	autoconf
-
+	autoconf \

@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
 WORKDIR /app
 
@@ -15,8 +15,8 @@ ENV TZ=Europe/Moscow
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-# ENV CXX="/usr/bin/clang++-17"
-# ENV CC="/usr/bin/clang-17"
+ENV CXX="/usr/bin/clang++-17"
+ENV CC="/usr/bin/clang-17"
 
 # SSH
 EXPOSE 22
