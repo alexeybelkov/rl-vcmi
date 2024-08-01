@@ -16,8 +16,19 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 Also you may install Docker Desktop
-#### To build the container:
+#### Build the container:
 ```
 cd rl-vcmi/docker
 docker compose build
+docker run rl-vcmi
+```
+And to use terminal inside the container
+```
+docker exec -it rl-vcmi bash
+```
+#### Build vcmi, INSIDE the container:
+```
+cd rl-vcmi/build
+cmake -S ../vcmi -G Ninja
+cmake --build . -j16
 ```
